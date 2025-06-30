@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Outdoor Industrial Router -->
+        <record id="product_outdoor_router" model="product.template">
+            <field name="name">Industrial Outdoor 5G Router</field>
+            <field name="default_code">NET-RTR-OUT-5G</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="list_price">899.99</field>
+            <field name="standard_price">650.00</field>
+            <field name="weight">1.8</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Heavy-duty industrial 5G router designed for outdoor deployment in harsh environments. Features dual SIM failover, multiple Ethernet ports, and industrial-grade components.
+
+Key Features:
+- 5G/4G/3G connectivity with automatic failover
+- Dual SIM card slots
+- 4x Gigabit Ethernet ports
+- Wide operating temperature range
+- IP67 rated enclosure
+- Enhanced surge protection
+- DIN rail and pole mounting options
+- Remote management capabilities</field>
+            
+            <!-- Environmental conditions data -->
+            <field name="min_operating_temp">-40</field>
+            <field name="max_operating_temp">70</field>
+            <field name="min_storage_temp">-40</field>
+            <field name="max_storage_temp">85</field>
+            <field name="min_operating_humidity">5</field>
+            <field name="max_operating_humidity">95</field>
+            <field name="min_operating_altitude">-500</field>
+            <field name="max_operating_altitude">3000</field>
+            <field name="ip_rating_id" ref="protection_rating_ip67"/>
+            <field name="ik_rating_id" ref="protection_rating_ik08"/>
+            <field name="is_vibration_resistant">True</field>
+            <field name="vibration_rating">5-500Hz, 1.5g</field>
+            <field name="is_shock_resistant">True</field>
+            <field name="shock_rating">25g, 11ms, half-sine</field>
+            <field name="is_uv_resistant">True</field>
+            <field name="uv_resistance_years">5.0</field>
+            <field name="is_salt_spray_resistant">True</field>
+            <field name="salt_spray_hours">96</field>
+            <field name="environmental_certifications">EN 50155 (Railway applications)
+MIL-STD-810G (Military standard for environmental engineering)
+IEC 60068-2-1 (Cold)
+IEC 60068-2-2 (Dry heat)
+IEC 60068-2-30 (Damp heat, cyclic)</field>
+        </record>
+        
+        <!-- LCD Display -->
+        <record id="product_lcd_display" model="product.template">
+            <field name="name">24-inch Indoor Industrial LCD Display</field>
+            <field name="default_code">DISP-24-IND</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="list_price">649.99</field>
+            <field name="standard_price">420.00</field>
+            <field name="weight">5.2</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">24-inch industrial-grade LCD monitor designed for control rooms and factory environments. Built for continuous operation with a rugged design.
+
+Key Features:
+- 24" FHD (1920x1080) display
+- Anti-glare coating
+- Hardened front glass
+- Wide viewing angles
+- Multiple input options (HDMI, DVI, VGA)
+- Metal enclosure
+- VESA mount compatible
+- Extended operating hours (24/7)</field>
+            
+            <!-- Environmental conditions data -->
+            <field name="min_operating_temp">0</field>
+            <field name="max_operating_temp">50</field>
+            <field name="min_storage_temp">-20</field>
+            <field name="max_storage_temp">60</field>
+            <field name="min_operating_humidity">10</field>
+            <field name="max_operating_humidity">90</field>
+            <field name="min_operating_altitude">0</field>
+            <field name="max_operating_altitude">2000</field>
+            <field name="ip_rating_id" ref="protection_rating_ip54"/>
+            <field name="ik_rating_id" ref="protection_rating_ik07"/>
+            <field name="is_vibration_resistant">False</field>
+            <field name="is_shock_resistant">False</field>
+            <field name="is_uv_resistant">False</field>
+            <field name="is_salt_spray_resistant">False</field>
+            <field name="is_chemical_resistant">True</field>
+            <field name="chemical_resistance_notes">The display's front panel is resistant to:
+- Mild cleaning agents
+- Isopropyl alcohol (up to 70%)
+- Weak acids and bases
+- Common industrial solvents (limited exposure)
+
+The housing is resistant to standard industrial lubricants and oils with incidental contact.</field>
+        </record>
+        
+        <!-- Handheld Scanner -->
+        <record id="product_handheld_scanner" model="product.template">
+            <field name="name">Rugged Handheld Barcode Scanner</field>
+            <field name="default_code">SCAN-RGD-1D2D</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="list_price">349.99</field>
+            <field name="standard_price">240.00</field>
+            <field name="weight">0.32</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Rugged handheld barcode scanner for warehouse and industrial use. Designed to withstand drops, dust, and moisture.
+
+Key Features:
+- 1D and 2D barcode scanning
+- Bluetooth and USB connectivity
+- Reinforced housing with rubberized grip
+- Drop tested to 1.8m on concrete
+- Long-lasting battery (up to 12 hours)
+- Fast scanning speed (100+ scans/second)
+- Configurable feedback (LED, beeper, vibration)</field>
+            
+            <!-- Environmental conditions data -->
+            <field name="min_operating_temp">-20</field>
+            <field name="max_operating_temp">60</field>
+            <field name="min_storage_temp">-30</field>
+            <field name="max_storage_temp">70</field>
+            <field name="min_operating_humidity">5</field>
+            <field name="max_operating_humidity">95</field>
+            <field name="ip_rating_id" ref="protection_rating_ip65"/>
+            <field name="is_shock_resistant">True</field>
+            <field name="shock_rating">Multiple 1.8m drops to concrete, all sides and corners (MIL-STD-810G 516.6)</field>
+            <field name="is_chemical_resistant">True</field>
+            <field name="chemical_resistance_notes">Housing is resistant to:
+- Industrial alcohols
+- Common disinfectants
+- Warehouse cleaning solutions</field>
+            <field name="environmental_certifications">MIL-STD-810G for drop and shock
+Tested for 2,000 tumbles at 1m</field>
+        </record>
+        
+        <!-- Waterproof Camera -->
+        <record id="product_waterproof_camera" model="product.template">
+            <field name="name">Industrial Waterproof IP Camera</field>
+            <field name="default_code">CAM-OUT-4MP</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="list_price">249.99</field>
+            <field name="standard_price">175.00</field>
+            <field name="weight">0.95</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Outdoor security camera with 4MP resolution and night vision. Weather-resistant design for continuous outdoor monitoring.
+
+Key Features:
+- 4 Megapixel resolution
+- 30m IR night vision
+- H.265+ video compression
+- PoE (Power over Ethernet)
+- Motion detection with alerts
+- Wide dynamic range
+- Built-in microphone
+- SD card storage slot</field>
+            
+            <!-- Environmental conditions data -->
+            <field name="min_operating_temp">-30</field>
+            <field name="max_operating_temp">60</field>
+            <field name="min_storage_temp">-40</field>
+            <field name="max_storage_temp">70</field>
+            <field name="min_operating_humidity">10</field>
+            <field name="max_operating_humidity">95</field>
+            <field name="ip_rating_id" ref="protection_rating_ip67"/>
+            <field name="ik_rating_id" ref="protection_rating_ik10"/>
+            <field name="is_uv_resistant">True</field>
+            <field name="uv_resistance_years">7.0</field>
+            <field name="is_salt_spray_resistant">True</field>
+            <field name="salt_spray_hours">120</field>
+            <field name="special_environmental_notes">Built-in heater for cold environments. Anti-fog lens coating for humid conditions.</field>
+        </record>
+    </data>
+</odoo>

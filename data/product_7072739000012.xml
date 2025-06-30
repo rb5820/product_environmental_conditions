@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product with GTIN/Barcode 7072739000012 - Norphonic VoIP Phone -->
+    <record id="product_norphonic_voip_phone_7072739000012" model="product.template">
+        <field name="name">Norphonic VoIP Phone with Keypad - 1000mm Cable</field>
+        <field name="default_code">NORP-VOIP-KP-1000</field>
+        <field name="barcode">7072739000012</field>
+        <field name="type">product</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="list_price">1495.00</field>
+        <field name="standard_price">1050.00</field>
+        <field name="weight">3.2</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description">Norphonic Heavy Duty VoIP Telephone with Keypad and 1000mm Cable - designed for harsh environment installations requiring reliable communication.
+
+Key Features:
+- Industrial-grade VoIP telephone for critical infrastructure
+- Heavy-duty aluminum die-cast enclosure (painted orange)
+- Full numeric keypad with metal buttons
+- High-performance acoustic components
+- HD voice quality
+- 1000mm cable for flexible installation
+- Advanced echo and noise cancellation
+- SIP and STENTOFON Pulse protocols
+- PoE (Power over Ethernet) and external power options
+- Built-in relay outputs and digital inputs
+- Emergency call functions and autodial
+- RFID reader option
+- Local and remote diagnostics</field>
+        
+        <!-- Environmental conditions data -->
+        <field name="min_operating_temp">-40</field>
+        <field name="max_operating_temp">70</field>
+        <field name="min_storage_temp">-50</field>
+        <field name="max_storage_temp">75</field>
+        <field name="min_operating_humidity">10</field>
+        <field name="max_operating_humidity">95</field>
+        <field name="min_operating_altitude">-300</field>
+        <field name="max_operating_altitude">2500</field>
+        <field name="ip_rating_id" ref="product_environmental_conditions.protection_rating_ip66"/>
+        <field name="ik_rating_id" ref="product_environmental_conditions.protection_rating_ik10"/>
+        <field name="is_vibration_resistant">True</field>
+        <field name="vibration_rating">DNV, IEC 60068-2-6, 4-100Hz, 1g</field>
+        <field name="is_shock_resistant">True</field>
+        <field name="shock_rating">DNV, IEC 60068-2-27, 15g, 11ms, half-sine</field>
+        <field name="is_uv_resistant">True</field>
+        <field name="uv_resistance_years">10.0</field>
+        <field name="is_salt_spray_resistant">True</field>
+        <field name="salt_spray_hours">1500</field>
+        <field name="is_chemical_resistant">True</field>
+        <field name="chemical_resistance_notes">Housing resistant to:
+- Salt water and salt mist
+- Industrial oils and lubricants
+- Most cleaning chemicals and disinfectants
+- Corrosive atmospheric environments
+- Diesel, gasoline and petroleum-based products
+- Mild acids and alkalis
+
+Special corrosion-resistant coating provides long-term protection in marine environments. All external hardware is made from marine-grade stainless steel.</field>
+        <field name="environmental_certifications">DNV GL Type Approval Certificate
+IEC 60945 Maritime Navigation Equipment
+EN 50121-4 Railway Applications
+EN 60529 IP66 Ingress Protection
+IEC 60068-2-6 Vibration
+IEC 60068-2-27 Shock
+Designed for ATEX Zone 2 compliance (with optional accessory)</field>
+        <field name="special_environmental_notes">Specially designed for offshore platforms, vessels, tunnels, roadside emergency call points, and industrial sites with extreme conditions.
+
+Features internal heater for cold environments to prevent condensation and ensure reliable operation in freezing temperatures.
+
+Metal keypad is designed to be operated with gloves and remain responsive in all environmental conditions.
+
+Acoustic design ensures clear communication even in high-noise environments (up to 100+ dB ambient noise).
+
+1000mm cable allows flexible mounting while providing protection against vandalism and extreme weather conditions.</field>
+    </record>
+</odoo>

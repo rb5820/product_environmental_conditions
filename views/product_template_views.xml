@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add Environmental Conditions tab to product form view -->
+    <record id="product_template_form_view_environmental_conditions_v18" model="ir.ui.view">
+        <field name="name">product.template.form.environmental.conditions.v18</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Environmental Conditions" name="environmental_conditions">
+                    <group>
+                        <group string="Operating Temperature">
+                            <field name="min_operating_temp"/>
+                            <field name="max_operating_temp"/>
+                            <field name="min_operating_temp_f"/>
+                            <field name="max_operating_temp_f"/>
+                        </group>
+                        <group string="Storage Temperature">
+                            <field name="min_storage_temp"/>
+                            <field name="max_storage_temp"/>
+                            <field name="min_storage_temp_f"/>
+                            <field name="max_storage_temp_f"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Humidity">
+                            <field name="min_operating_humidity"/>
+                            <field name="max_operating_humidity"/>
+                        </group>
+                        <group string="Altitude">
+                            <field name="min_operating_altitude"/>
+                            <field name="max_operating_altitude"/>
+                            <field name="min_operating_altitude_ft"/>
+                            <field name="max_operating_altitude_ft"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Protection Ratings">
+                            <field name="ip_rating_id"/>
+                            <field name="ik_rating_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Environmental Resistance">
+                            <group>
+                                <group string="Vibration &amp; Shock">
+                                    <field name="is_vibration_resistant"/>
+                                    <field name="vibration_rating" invisible="1" visibility_depends="is_vibration_resistant"/>
+                                    <field name="is_shock_resistant"/>
+                                    <field name="shock_rating" invisible="1" visibility_depends="is_shock_resistant"/>
+                                </group>
+                                <group string="Environmental Resistance">
+                                    <field name="is_uv_resistant"/>
+                                    <field name="uv_resistance_years" invisible="1" visibility_depends="is_uv_resistant"/>
+                                    <field name="is_salt_spray_resistant"/>
+                                    <field name="salt_spray_hours" invisible="1" visibility_depends="is_salt_spray_resistant"/>
+                                    <field name="is_chemical_resistant"/>
+                                </group>
+                            </group>
+                            <group invisible="1" visibility_depends="is_chemical_resistant">
+                                <field name="chemical_resistance_notes" nolabel="1" placeholder="Specify which chemicals the product is resistant to..."/>
+                            </group>
+                        </page>
+                        <page string="Certifications &amp; Notes">
+                            <group>
+                                <field name="environmental_certifications" placeholder="List environmental certifications, standards, or test reports the product has passed..."/>
+                            </group>
+                            <group>
+                                <field name="special_environmental_notes" placeholder="Add any additional notes about environmental operating conditions..."/>
+                            </group>
+                        </page>
+                    </notebook>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <!-- Add environmental fields to product search view -->
+    <record id="product_template_search_view_environmental_conditions_v18" model="ir.ui.view">
+        <field name="name">product.template.search.environmental.conditions.v18</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="ip_rating_id"/>
+                <field name="ik_rating_id"/>
+                <filter string="UV Resistant" name="uv_resistant" domain="[('is_uv_resistant', '=', True)]"/>
+                <filter string="Chemical Resistant" name="chemical_resistant" domain="[('is_chemical_resistant', '=', True)]"/>
+                <filter string="Shock Resistant" name="shock_resistant" domain="[('is_shock_resistant', '=', True)]"/>
+                <filter string="Vibration Resistant" name="vibration_resistant" domain="[('is_vibration_resistant', '=', True)]"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Removed kanban view due to compatibility issues with Odoo 18 -->
+
+    <!-- Removed list view due to XML ID changes in Odoo 18 -->
+</odoo>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Protection Rating list View -->
+    <record id="protection_rating_view_list_v18" model="ir.ui.view">
+        <field name="name">protection.rating.list.v18</field>
+        <field name="model">protection.rating</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="rating_type"/>
+                <field name="first_digit"/>
+                <field name="second_digit"/>
+                <field name="impact_energy"/>
+                <field name="standard_reference"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Protection Rating Form View -->
+    <record id="protection_rating_view_form_v18" model="ir.ui.view">
+        <field name="name">protection.rating.form.v18</field>
+        <field name="model">protection.rating</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. IP67, IK08"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="rating_type"/>
+                            <field name="standard_reference"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="impact_energy" invisible="1" visibility_depends="rating_type" visibility_condition="ik"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="IP Rating Details" invisible="1" visibility_depends="rating_type" visibility_condition="ip">
+                            <group>
+                                <group>
+                                    <field name="first_digit"/>
+                                    <field name="first_digit_meaning"/>
+                                </group>
+                                <group>
+                                    <field name="second_digit"/>
+                                    <field name="second_digit_meaning"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Description">
+                            <field name="description" placeholder="Detailed description of the protection provided by this rating..."/>
+                        </page>
+                        <page string="Testing Method">
+                            <field name="testing_method" placeholder="How products are tested to verify this rating..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Protection Rating Search View -->
+    <record id="protection_rating_view_search_v18" model="ir.ui.view">
+        <field name="name">protection.rating.search.v18</field>
+        <field name="model">protection.rating</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="standard_reference"/>
+                <filter string="IP Ratings" name="ip_ratings" domain="[('rating_type', '=', 'ip')]"/>
+                <filter string="IK Ratings" name="ik_ratings" domain="[('rating_type', '=', 'ik')]"/>
+                <filter string="Other Ratings" name="other_ratings" domain="[('rating_type', '=', 'other')]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Rating Type" name="groupby_type" context="{'group_by': 'rating_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Protection Rating Action -->
+    <record id="action_protection_rating" model="ir.actions.act_window">
+        <field name="name">Protection Ratings</field>
+        <field name="res_model">protection.rating</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="protection_rating_view_search_v18"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first protection rating
+            </p>
+            <p>
+                Define IP (Ingress Protection) and IK (Impact) ratings for your products.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu item -->
+    <menuitem id="menu_protection_rating"
+              name="Protection Ratings"
+              action="action_protection_rating"
+              parent="stock.menu_product_in_config_stock"
+              sequence="30"/>
+</odoo>

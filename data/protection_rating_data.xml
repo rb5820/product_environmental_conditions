@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- IP Ratings -->
+    <record id="protection_rating_ip00" model="protection.rating">
+        <field name="name">IP00</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">1</field>
+        <field name="first_digit">0</field>
+        <field name="second_digit">0</field>
+        <field name="first_digit_meaning">No protection against contact and ingress of objects</field>
+        <field name="second_digit_meaning">No protection against water</field>
+        <field name="description">No protection against any ingress of solids or liquids. Completely unprotected device.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip20" model="protection.rating">
+        <field name="name">IP20</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">2</field>
+        <field name="first_digit">2</field>
+        <field name="second_digit">0</field>
+        <field name="first_digit_meaning">Protected against solid objects over 12mm (fingers)</field>
+        <field name="second_digit_meaning">No protection against water</field>
+        <field name="description">Protected against fingers or similar objects but no protection against liquids. Typical for indoor electronics.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip44" model="protection.rating">
+        <field name="name">IP44</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">3</field>
+        <field name="first_digit">4</field>
+        <field name="second_digit">4</field>
+        <field name="first_digit_meaning">Protected against solid objects over 1mm (wires, screws)</field>
+        <field name="second_digit_meaning">Protected against water splashed from all directions</field>
+        <field name="description">Protection against access to hazardous parts with wires and water splashing from any direction. Suitable for outdoor installation with rain protection.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip54" model="protection.rating">
+        <field name="name">IP54</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">4</field>
+        <field name="first_digit">5</field>
+        <field name="second_digit">4</field>
+        <field name="first_digit_meaning">Protected against dust with limited ingress (no harmful deposit)</field>
+        <field name="second_digit_meaning">Protected against water splashed from all directions</field>
+        <field name="description">Dust-protected and splash-proof from all directions. Suitable for industrial environments or outdoor use where water splashing is expected.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip65" model="protection.rating">
+        <field name="name">IP65</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">5</field>
+        <field name="first_digit">6</field>
+        <field name="second_digit">5</field>
+        <field name="first_digit_meaning">Totally protected against dust ingress</field>
+        <field name="second_digit_meaning">Protected against low pressure water jets from any direction</field>
+        <field name="description">Dust-tight and protected against water jets. Typical for outdoor equipment exposed to rain and dust.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip66" model="protection.rating">
+        <field name="name">IP66</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">6</field>
+        <field name="first_digit">6</field>
+        <field name="second_digit">6</field>
+        <field name="first_digit_meaning">Totally protected against dust ingress</field>
+        <field name="second_digit_meaning">Protected against powerful water jets</field>
+        <field name="description">Dust-tight and protected against powerful water jets. Suitable for harsh environments with high-pressure water cleaning.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip67" model="protection.rating">
+        <field name="name">IP67</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">7</field>
+        <field name="first_digit">6</field>
+        <field name="second_digit">7</field>
+        <field name="first_digit_meaning">Totally protected against dust ingress</field>
+        <field name="second_digit_meaning">Protected against immersion between 15cm and 1m depth</field>
+        <field name="description">Dust-tight and can be immersed in water up to 1 meter for 30 minutes. Common for electronic devices advertised as waterproof.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip68" model="protection.rating">
+        <field name="name">IP68</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">8</field>
+        <field name="first_digit">6</field>
+        <field name="second_digit">8</field>
+        <field name="first_digit_meaning">Totally protected against dust ingress</field>
+        <field name="second_digit_meaning">Protected against long periods of immersion under pressure</field>
+        <field name="description">Dust-tight and suitable for continuous immersion in water under specified conditions (typically deeper than 1 meter). The highest level of water protection.</field>
+        <field name="standard_reference">IEC 60529</field>
+    </record>
+    
+    <record id="protection_rating_ip69k" model="protection.rating">
+        <field name="name">IP69K</field>
+        <field name="rating_type">ip</field>
+        <field name="sequence">9</field>
+        <field name="first_digit">6</field>
+        <field name="second_digit">9K</field>
+        <field name="first_digit_meaning">Totally protected against dust ingress</field>
+        <field name="second_digit_meaning">Protected against high-pressure and high-temperature water jets</field>
+        <field name="description">Dust-tight and protected against close-range high-pressure, high-temperature spray downs. Used in food industry or environments requiring regular intensive cleaning.</field>
+        <field name="standard_reference">ISO 20653 (formerly DIN 40050-9)</field>
+    </record>
+    
+    <!-- IK Ratings -->
+    <record id="protection_rating_ik00" model="protection.rating">
+        <field name="name">IK00</field>
+        <field name="rating_type">ik</field>
+        <field name="sequence">10</field>
+        <field name="impact_energy">0</field>
+        <field name="description">No protection against mechanical impact.</field>
+        <field name="standard_reference">IEC 62262</field>
+    </record>
+    
+    <record id="protection_rating_ik05" model="protection.rating">
+        <field name="name">IK05</field>
+        <field name="rating_type">ik</field>
+        <field name="sequence">11</field>
+        <field name="impact_energy">0.7</field>
+        <field name="description">Protected against 0.7 joule impact. Equivalent to impact of 0.25kg object dropped from 300mm height.</field>
+        <field name="standard_reference">IEC 62262</field>
+    </record>
+    
+    <record id="protection_rating_ik07" model="protection.rating">
+        <field name="name">IK07</field>
+        <field name="rating_type">ik</field>
+        <field name="sequence">12</field>
+        <field name="impact_energy">2</field>
+        <field name="description">Protected against 2 joule impact. Equivalent to impact of 0.5kg object dropped from 400mm height.</field>
+        <field name="standard_reference">IEC 62262</field>
+    </record>
+    
+    <record id="protection_rating_ik08" model="protection.rating">
+        <field name="name">IK08</field>
+        <field name="rating_type">ik</field>
+        <field name="sequence">13</field>
+        <field name="impact_energy">5</field>
+        <field name="description">Protected against 5 joule impact. Equivalent to impact of 1.7kg object dropped from 300mm height.</field>
+        <field name="standard_reference">IEC 62262</field>
+    </record>
+    
+    <record id="protection_rating_ik10" model="protection.rating">
+        <field name="name">IK10</field>
+        <field name="rating_type">ik</field>
+        <field name="sequence">14</field>
+        <field name="impact_energy">20</field>
+        <field name="description">Protected against 20 joule impact. Equivalent to impact of 5kg object dropped from 400mm height. The highest protection level under IEC 62262.</field>
+        <field name="standard_reference">IEC 62262</field>
+    </record>
+</odoo>
