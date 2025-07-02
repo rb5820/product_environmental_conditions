@@ -11,24 +11,29 @@ class ProductTemplate(models.Model):
     min_operating_temp = fields.Float(
         string='Min Operating Temperature (°C)',
         help='Minimum temperature at which the product can safely operate',
+        tracking=True,
+        default=None,
         digits=(5, 2),
     )
     
     max_operating_temp = fields.Float(
         string='Max Operating Temperature (°C)', 
         help='Maximum temperature at which the product can safely operate',
+        tracking=True,
         digits=(5, 2),
     )
     
     min_storage_temp = fields.Float(
         string='Min Storage Temperature (°C)',
         help='Minimum temperature at which the product can be safely stored',
+        tracking=True,
         digits=(5, 2),
     )
     
     max_storage_temp = fields.Float(
         string='Max Storage Temperature (°C)',
         help='Maximum temperature at which the product can be safely stored',
+        tracking=True,
         digits=(5, 2),
     )
     
@@ -37,6 +42,8 @@ class ProductTemplate(models.Model):
         string='Min Operating Temperature (°F)',
         compute='_compute_fahrenheit_temps',
         inverse='_inverse_min_operating_temp_f',
+        readonly=True,
+        tracking=True,
         digits=(5, 2),
         help='Minimum operating temperature in Fahrenheit',
     )
@@ -45,6 +52,8 @@ class ProductTemplate(models.Model):
         string='Max Operating Temperature (°F)',
         compute='_compute_fahrenheit_temps',
         inverse='_inverse_max_operating_temp_f',
+        readonly=True,
+        tracking=True,
         digits=(5, 2),
         help='Maximum operating temperature in Fahrenheit',
     )
@@ -53,6 +62,8 @@ class ProductTemplate(models.Model):
         string='Min Storage Temperature (°F)',
         compute='_compute_fahrenheit_temps',
         inverse='_inverse_min_storage_temp_f',
+        readonly=True,
+        tracking=True,
         digits=(5, 2),
         help='Minimum storage temperature in Fahrenheit',
     )
@@ -61,6 +72,8 @@ class ProductTemplate(models.Model):
         string='Max Storage Temperature (°F)',
         compute='_compute_fahrenheit_temps',
         inverse='_inverse_max_storage_temp_f',
+        readonly=True,
+        tracking=True,
         digits=(5, 2),
         help='Maximum storage temperature in Fahrenheit',
     )
@@ -75,12 +88,14 @@ class ProductTemplate(models.Model):
     min_operating_humidity = fields.Float(
         string='Min Operating Humidity (%)',
         help='Minimum humidity level at which the product can safely operate',
+        tracking=True,
         digits=(5, 2),
     )
     
     max_operating_humidity = fields.Float(
         string='Max Operating Humidity (%)',
         help='Maximum humidity level at which the product can safely operate',
+        tracking=True,
         digits=(5, 2),
     )
     
@@ -94,11 +109,13 @@ class ProductTemplate(models.Model):
     min_operating_altitude = fields.Integer(
         string='Min Operating Altitude (m)',
         help='Minimum altitude at which the product can safely operate',
+        tracking=True,
     )
     
     max_operating_altitude = fields.Integer(
         string='Max Operating Altitude (m)',
         help='Maximum altitude at which the product can safely operate',
+        tracking=True,
     )
     
     # Altitude conversions (computed fields)
@@ -106,6 +123,8 @@ class ProductTemplate(models.Model):
         string='Min Operating Altitude (ft)',
         compute='_compute_feet_altitude',
         inverse='_inverse_min_operating_altitude_ft',
+        readonly=True,
+        tracking=True,
         help='Minimum operating altitude in feet',
     )
     
@@ -113,6 +132,8 @@ class ProductTemplate(models.Model):
         string='Max Operating Altitude (ft)',
         compute='_compute_feet_altitude',
         inverse='_inverse_max_operating_altitude_ft',
+        readonly=True,
+        tracking=True,
         help='Maximum operating altitude in feet',
     )
     
@@ -121,6 +142,7 @@ class ProductTemplate(models.Model):
         'protection.rating',
         string='IP Rating',
         domain=[('rating_type', '=', 'ip')],
+        tracking=True,
         help='Ingress Protection rating against dust and water',
     )
     
@@ -128,58 +150,69 @@ class ProductTemplate(models.Model):
         'protection.rating',
         string='IK Rating',
         domain=[('rating_type', '=', 'ik')],
+        tracking=True,  
         help='Impact protection rating',
     )
     
     # Environmental resistance specifications
     is_vibration_resistant = fields.Boolean(
         string='Vibration Resistant',
+        tracking=True,
         help='Product can operate in environments with significant vibrations',
     )
     
     vibration_rating = fields.Char(
         string='Vibration Rating',
+        tracking=True,
         help='Vibration resistance specification (e.g., MIL-STD-810G)',
     )
     
     is_uv_resistant = fields.Boolean(
         string='UV Resistant',
+        tracking=True,
         help='Product has UV resistance for outdoor applications',
     )
     
     uv_resistance_years = fields.Float(
         string='UV Resistance (years)',
         help='Estimated years of UV resistance before degradation',
+        tracking=True,
         digits=(4, 1),
     )
     
     is_salt_spray_resistant = fields.Boolean(
         string='Salt Spray Resistant',
+        tracking=True,
         help='Product can resist corrosion from salt spray',
     )
     
     salt_spray_hours = fields.Integer(
         string='Salt Spray Test (hours)',
+        tracking=True,
         help='Hours of salt spray resistance in testing',
     )
     
     is_chemical_resistant = fields.Boolean(
         string='Chemical Resistant',
+        tracking=True,
         help='Product has resistance to chemical substances',
     )
     
     chemical_resistance_notes = fields.Text(
         string='Chemical Resistance Notes',
+        tracking=True,
         help='Details of chemicals the product is resistant to',
     )
     
     is_shock_resistant = fields.Boolean(
         string='Shock Resistant',
+        tracking=True,
         help='Product can withstand mechanical shocks',
     )
     
     shock_rating = fields.Char(
         string='Shock Rating',
+        tracking=True,
         help='Shock resistance specification (e.g., survive drops from 1.5m)',
     )
     

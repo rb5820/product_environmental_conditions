@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product - Meinberg LANTIME-M320-GPS-AD10 Time Server -->
+    <record id="product_meinberg_lantime_m320_gps_ad10" model="product.template">
+        <field name="name">Meinberg LANTIME-M320-GPS-AD10 NTP Time Server</field>
+        <field name="default_code">LANTIME-M320-GPS-AD10</field>
+        <field name="barcode">4260483330203</field>
+        <field name="type">product</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="list_price">5995.00</field>
+        <field name="standard_price">4795.00</field>
+        <field name="weight">3.5</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description">Meinberg LANTIME-M320-GPS-AD10 Network Time Server with high-precision GPS reference and advanced network management features.
+
+Key Features:
+- 19" 1U rackmount enclosure
+- High-performance NTP server with hardware timestamping
+- GPS reference receiver with integrated antenna
+- Dual redundant power supplies (AC and DC)
+- Integrated GNSS receiver (GPS, GLONASS, Galileo, BeiDou)
+- Multiple network interfaces (10/100/1000 Mbit)
+- Comprehensive security features
+- IPv4 and IPv6 support
+- Web-based management interface
+- Advanced monitoring and alerting
+- PTP (IEEE 1588) support
+- Oscillator options: TCXO, OCXO, Rubidium
+- Hot-swappable components
+- Modular system architecture
+- SNMP v2/v3 support
+- Serial console port
+- Reference time output options (PPS, 10MHz)</field>
+        
+        <!-- Environmental conditions data -->
+        <field name="min_operating_temp">0</field>
+        <field name="max_operating_temp">50</field>
+        <field name="min_storage_temp">-20</field>
+        <field name="max_storage_temp">70</field>
+        <field name="min_operating_humidity">10</field>
+        <field name="max_operating_humidity">90</field>
+        <field name="min_operating_altitude">0</field>
+        <field name="max_operating_altitude">3000</field>
+        <field name="ip_rating_id" ref="product_environmental_conditions.protection_rating_ip20"/>
+        <field name="is_vibration_resistant">True</field>
+        <field name="vibration_rating">EN 60068-2-6, 10-55 Hz, 0.15mm amplitude</field>
+        <field name="is_shock_resistant">True</field>
+        <field name="shock_rating">EN 60068-2-27, 10g, 11ms</field>
+        <field name="is_uv_resistant">False</field>
+        <field name="is_salt_spray_resistant">False</field>
+        <field name="is_chemical_resistant">False</field>
+        <field name="chemical_resistance_notes">Standard datacenter-grade equipment designed for controlled environments. Not specifically designed for chemical exposure.
+
+Internal components protected by metal chassis. Standard ESD protection for electronic components.
+
+Device should be installed in controlled environments free from corrosive gases or liquids.</field>
+        <field name="environmental_certifications">CE Mark
+RoHS Compliant
+WEEE Compliant
+EN 55032 Class A (Emissions)
+EN 55035 (Immunity)
+EN 61000-3-2 (Harmonic Current Emissions)
+EN 61000-3-3 (Voltage Fluctuations and Flicker)
+FCC Part 15 Subpart B, Class A
+IEC 60950-1 / EN 60950-1 Safety
+EN 62368-1 Safety
+MTBF > 100,000 hours</field>
+        <field name="special_environmental_notes">Designed for installation in controlled data center and telecommunications environments.
+
+Internal high-stability oscillator (OCXO or Rubidium option) requires stable temperature environment for optimal performance.
+
+Active cooling system with temperature monitoring and automatic fan speed control ensures reliable operation within the specified temperature range.
+
+Internal holding time after loss of reference signal depends on oscillator option:
+- TCXO: ±1.5×10⁻⁶ per day
+- OCXO: ±5×10⁻¹⁰ per day
+- Rubidium: ±5×10⁻¹¹ per day
+
+Time server provides internal environmental monitoring with SNMP traps for temperature and humidity threshold violations.
+
+Built-in watchdog system monitors internal operational parameters and can trigger automatic alerts and recovery procedures.
+
+GPS antenna requires outdoor installation with clear view of the sky, connected via provided antenna cable (up to 100m).</field>
+    </record>
+</odoo>

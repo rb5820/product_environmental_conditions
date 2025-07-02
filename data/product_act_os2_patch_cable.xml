@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product - ACT 12 Meter LSZH Singlemode Fiber Patch Cable -->
+    <record id="product_act_os2_fiber_patch_cable" model="product.template">
+        <field name="name">ACT 12 Meter LSZH Singlemode 9/125 OS2 Fiber Patch Cable Duplex LC/LC</field>
+        <field name="default_code">RL9912</field>
+        <field name="barcode">RL9912</field>
+        <field name="type">product</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="list_price">36.95</field>
+        <field name="standard_price">24.00</field>
+        <field name="weight">0.15</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description">ACT 12 Meter LSZH Singlemode 9/125 OS2 Fiber Patch Cable Duplex with LC Connectors - designed for high-speed data transmission in telecommunications and networking environments.
+
+Key Features:
+- OS2 Singlemode 9/125 fiber optic cable
+- Duplex (2-strand) configuration
+- LC/LC connectors on both ends
+- 12 meter length
+- LSZH (Low Smoke Zero Halogen) jacket
+- Yellow cable color for easy identification
+- Factory terminated and tested
+- Low insertion loss
+- High bandwidth capacity
+- UPC (Ultra Physical Contact) polishing
+- Supports 1310nm and 1550nm wavelengths
+- Suitable for long-distance data transmission
+- Compliant with industry standards</field>
+        
+        <!-- Environmental conditions data -->
+        <field name="min_operating_temp">-20</field>
+        <field name="max_operating_temp">70</field>
+        <field name="min_storage_temp">-40</field>
+        <field name="max_storage_temp">85</field>
+        <field name="min_operating_humidity">0</field>
+        <field name="max_operating_humidity">95</field>
+        <field name="min_operating_altitude">-100</field>
+        <field name="max_operating_altitude">3000</field>
+        <field name="ip_rating_id" ref="product_environmental_conditions.protection_rating_ip20"/>
+        <field name="is_vibration_resistant">True</field>
+        <field name="vibration_rating">IEC 60794-1-22, E8: 10-55 Hz</field>
+        <field name="is_shock_resistant">True</field>
+        <field name="shock_rating">IEC 60794-1-22, E7</field>
+        <field name="is_uv_resistant">False</field>
+        <field name="is_salt_spray_resistant">False</field>
+        <field name="is_chemical_resistant">True</field>
+        <field name="chemical_resistance_notes">LSZH (Low Smoke Zero Halogen) jacket provides:
+- Resistance to common industrial chemicals
+- Protection against acids and bases in indoor environments
+- Resistance to cleaning agents and solvents
+- Limited exposure to petroleum-based products
+- Reduced toxicity and corrosiveness in case of fire
+
+Not recommended for direct exposure to harsh chemicals or outdoor environments without additional protection.</field>
+        <field name="environmental_certifications">IEC 60332-1 Flame Retardant
+IEC 60754-1 Zero Halogen
+IEC 61034-2 Low Smoke
+RoHS Compliant
+REACH Compliant
+ITU-T G.652.D Fiber Standard
+ISO/IEC 11801 Category OS2
+TIA/EIA 568-C.3 Compliant
+ANSI/TIA-568-C.3
+TIA/EIA-604-10A (FOCIS 10)</field>
+        <field name="special_environmental_notes">Designed for indoor and data center environments with LSZH (Low Smoke Zero Halogen) jacket for enhanced safety in case of fire.
+
+Fiber optic core is insensitive to electromagnetic interference (EMI) and radio frequency interference (RFI).
+
+Cable bend radius: 30mm static, 60mm dynamic. Exceeding minimum bend radius may result in increased attenuation or permanent damage.
+
+Maximum tensile load: 220N short term, 110N long term.
+
+Temperature cycling performance tested according to IEC 60794-1-22, F1.
+
+Not suitable for direct burial, underwater applications, or extreme outdoor exposure without proper protection.
+
+Operating temperature range suitable for most data center and telecommunications room environments.</field>
+    </record>
+</odoo>

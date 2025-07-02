@@ -12,6 +12,7 @@
                         <group string="Operating Temperature">
                             <field name="min_operating_temp"/>
                             <field name="max_operating_temp"/>
+                            <field name="temp_range_visualization"/>
                             <field name="min_operating_temp_f"/>
                             <field name="max_operating_temp_f"/>
                         </group>
@@ -26,6 +27,7 @@
                         <group string="Humidity">
                             <field name="min_operating_humidity"/>
                             <field name="max_operating_humidity"/>
+                            <field name="humidity_range_visualization"/>
                         </group>
                         <group string="Altitude">
                             <field name="min_operating_altitude"/>
@@ -45,20 +47,20 @@
                             <group>
                                 <group string="Vibration &amp; Shock">
                                     <field name="is_vibration_resistant"/>
-                                    <field name="vibration_rating" invisible="1" visibility_depends="is_vibration_resistant"/>
+                                    <field name="vibration_rating"/>
                                     <field name="is_shock_resistant"/>
-                                    <field name="shock_rating" invisible="1" visibility_depends="is_shock_resistant"/>
+                                    <field name="shock_rating"/>
                                 </group>
                                 <group string="Environmental Resistance">
                                     <field name="is_uv_resistant"/>
-                                    <field name="uv_resistance_years" invisible="1" visibility_depends="is_uv_resistant"/>
+                                    <field name="uv_resistance_years"/>
                                     <field name="is_salt_spray_resistant"/>
-                                    <field name="salt_spray_hours" invisible="1" visibility_depends="is_salt_spray_resistant"/>
+                                    <field name="salt_spray_hours"/>
                                     <field name="is_chemical_resistant"/>
                                 </group>
                             </group>
-                            <group invisible="1" visibility_depends="is_chemical_resistant">
-                                <field name="chemical_resistance_notes" nolabel="1" placeholder="Specify which chemicals the product is resistant to..."/>
+                            <group visibility="is_chemical_resistant">
+                                <field name="chemical_resistance_notes" placeholder="Specify which chemicals the product is resistant to..."/>
                             </group>
                         </page>
                         <page string="Certifications &amp; Notes">

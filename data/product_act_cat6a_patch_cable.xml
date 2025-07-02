@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product - ACT 3 Meter LSZH SFTP CAT6A Patch Cable -->
+    <record id="product_act_cat6a_patch_cable" model="product.template">
+        <field name="name">ACT Blue 3 Meter LSZH SFTP CAT6A Patch Cable Snagless RJ45</field>
+        <field name="default_code">FB7603</field>
+        <field name="barcode">FB7603</field>
+        <field name="type">product</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="list_price">18.95</field>
+        <field name="standard_price">12.50</field>
+        <field name="weight">0.12</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="description">ACT Blue 3 Meter LSZH SFTP CAT6A Patch Cable Snagless with RJ45 Connectors - designed for high-speed networking applications requiring reliable performance and superior shielding.
+
+Key Features:
+- CAT6A S/FTP (Screened Foiled Twisted Pair) construction
+- 10 Gigabit Ethernet support up to 500MHz
+- Snagless boot design for easy insertion/removal
+- Blue LSZH (Low Smoke Zero Halogen) jacket
+- 3 meter length
+- Double shielded (overall foil + individual pair foiling)
+- 26AWG copper conductors
+- Gold-plated RJ45 connectors
+- Backward compatible with CAT6, CAT5e, and CAT5
+- Reduced alien crosstalk (AXT)
+- Ideal for data centers, server rooms, and high-density network installations
+- 100% factory tested</field>
+        
+        <!-- Environmental conditions data -->
+        <field name="min_operating_temp">-20</field>
+        <field name="max_operating_temp">75</field>
+        <field name="min_storage_temp">-40</field>
+        <field name="max_storage_temp">80</field>
+        <field name="min_operating_humidity">0</field>
+        <field name="max_operating_humidity">90</field>
+        <field name="min_operating_altitude">-100</field>
+        <field name="max_operating_altitude">3000</field>
+        <field name="ip_rating_id" ref="product_environmental_conditions.protection_rating_ip20"/>
+        <field name="is_vibration_resistant">True</field>
+        <field name="vibration_rating">IEC 60068-2-6, 10-150Hz</field>
+        <field name="is_shock_resistant">True</field>
+        <field name="shock_rating">IEC 60068-2-27</field>
+        <field name="is_uv_resistant">False</field>
+        <field name="is_salt_spray_resistant">False</field>
+        <field name="is_chemical_resistant">True</field>
+        <field name="chemical_resistance_notes">LSZH (Low Smoke Zero Halogen) jacket provides:
+- Moderate resistance to common industrial chemicals
+- Resistance to mild cleaning agents and standard office environments
+- Protection against dust and particulates
+- Limited resistance to oils and solvents
+- Reduced toxicity and corrosiveness in case of fire
+
+Double shielding (S/FTP) provides excellent protection against electromagnetic interference (EMI) and radio frequency interference (RFI).
+
+Not designed for direct exposure to harsh chemicals, outdoor environments, or submerged applications.</field>
+        <field name="environmental_certifications">IEC 60332-1 Flame Retardant
+IEC 60754-1 Zero Halogen
+IEC 61034-2 Low Smoke
+RoHS Compliant
+REACH Compliant
+ANSI/TIA-568-C.2 CAT6A
+ISO/IEC 11801 Class EA
+EN 50173-1 Class EA
+ETL Verified to TIA 568-C.2 CAT6A
+10GBASE-T IEEE 802.3an Standard Compliant</field>
+        <field name="special_environmental_notes">Designed for indoor enterprise and data center environments with LSZH (Low Smoke Zero Halogen) jacket for enhanced safety in case of fire.
+
+Double shielded construction (S/FTP) with overall foil shield and individual pair foil shields provides superior protection against EMI/RFI interference, making it suitable for electrically noisy environments.
+
+Minimum bend radius: 4x cable diameter static, 8x cable diameter dynamic. Exceeding minimum bend radius may cause performance degradation.
+
+Maximum installation tension: 25 lbs (110N).
+
+Snagless boot design protects the RJ45 connector's locking tab during installation and removal, extending cable life in high-density environments.
+
+Temperature performance tested to 75°C for extended operational use in equipment cabinets and high-density installations.
+
+Not suitable for direct burial, outdoor applications, or plenum spaces without additional protection.</field>
+    </record>
+</odoo>

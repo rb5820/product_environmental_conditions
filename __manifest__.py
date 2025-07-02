@@ -9,6 +9,7 @@
     'license': 'LGPL-3',
     'depends': [
         'base',
+        'mail',
         'product',
         'uom',
         'stock',
@@ -18,7 +19,7 @@
         'views/product_template_views.xml',
         'views/protection_rating_views.xml',
         'data/protection_rating_data.xml',
-        #'data/product_7072739000012.xml',
+        
     ],
     'demo': [
         'data/product_environmental_conditions_demo.xml',
