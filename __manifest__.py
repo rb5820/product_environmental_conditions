@@ -22,7 +22,7 @@
         
     ],
     'demo': [
-        'data/product_environmental_conditions_demo.xml',
+
     ],
     'installable': True,
     'application': False,
